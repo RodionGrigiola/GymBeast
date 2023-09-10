@@ -1,0 +1,60 @@
+.u-margin-bottom-xs {
+    margin-bottom: 1rem;
+}
+.u-margin-bottom-sm {
+    margin-bottom: 2rem;
+}
+.u-margin-bottom-md {
+    margin-bottom: 4rem;
+}
+.u-margin-bottom-lg {
+    margin-bottom: 8rem;
+}
+
+.u-center-text {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+}
+
+.grid:not(:last-child) {
+    margin-bottom: 9.6rem;
+}
+
+.grid--2--cols {
+    grid-template-columns: repeat(2, 1fr);  /* 1fr 1fr*/
+    @include respond(tab-land) {
+        gap: 3.5rem;
+    }
+    @include respond(tab-port) {
+        align-items: start;
+        grid-template-columns: 1fr; 
+        // grid-template-rows: 1fr 1fr;
+    }
+
+}  
+.grid--3--cols {
+    grid-template-columns: repeat(3, 1fr);  /* 1fr 1fr*/
+    // grid-template-columns: repeat(2, 1fr);  /* 1fr 1fr*/
+    @include respond(tab-land) {
+        grid-template-columns: 1fr; 
+    }
+}  
+.grid--4--cols {
+    grid-template-columns: repeat(4, 1fr);  /* 1fr 1fr*/
+    // @include respond(tab-land) {
+    //     grid-template-columns: 1fr 1fr;
+    //     justify-items: center;
+    // }
+}  
+.grid--5--cols {
+    grid-template-columns: repeat(5, 1fr);  /* 1fr 1fr*/
+}  
+
+.grid-center-vertically {
+    align-items: center;
+}

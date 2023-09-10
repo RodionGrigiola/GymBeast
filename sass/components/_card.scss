@@ -1,0 +1,218 @@
+.card-container {
+    display: grid;
+    column-gap: 6.4rem;
+    // row-gap: 9.6rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    @include respond(thousand) {
+        gap: 4.2rem;
+    }
+
+    @include respond(tab-port) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 6rem;
+    }
+
+    @include respond(phone) {
+        gap: 4.2rem;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 8rem;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    height: 53rem;
+    position: relative;
+    background-color: #fff;
+
+    @include respond(tab-port) {
+        width: 90%;
+    }
+    @include respond(phone) {
+        width: 60%;
+    }
+    @include respond(small-phone) {
+        width: 100%;
+    }
+   
+  
+
+    &--2 {
+        @include respond(tab-port) {
+            justify-self: flex-end;
+        }
+        @include respond(phone) {
+            gap: 4.2rem;
+            grid-template-columns: 1fr;
+            justify-self: center;
+        }
+    }
+    &--3 {
+        @include respond(tab-port) {
+            grid-column: 1/-1;
+            justify-self: center;
+            width: 45%;
+        }
+        @include respond(phone) {
+            width: 60%;
+        }
+        @include respond(small-phone) {
+            width: 60%;
+        }
+        @include respond(small-phone) {
+            width: 100%;
+        }
+    }
+
+   
+
+    & .btn {
+       width: 60%;
+       text-align: center;
+    }
+
+    a:link,
+    a:visited {
+        position: absolute;
+        left: 50%;
+        bottom: 0%;
+        transform: translateY(1px) translate(-50%, 50%);
+    }
+
+    a:hover {
+        transform: translateY(-1px)  translate(-50%, 50%);
+    }
+    a:active {
+        transform: translate(-50%, 50%);
+        box-shadow: none;
+    }
+
+    @include respond(tab-land) {
+        a {
+            font-size: 1.4rem;
+            // padding: 
+        }
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 23rem; 
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-blend-mode: hard-light;
+        transition: all .4s;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        filter: brightness(80%);
+
+        &:hover {
+            filter: brightness(60%) blur(1px);
+        }
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.1), rgba($color-primary-dark, 0.1)),
+            url(../img/cards/image-1.jpg);
+        }
+        &--2 {
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.1), rgba($color-primary-dark, 0.1)),
+            url(../img/cards/image-3.jpg);
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.1), rgba($color-primary-dark, 0.1)),
+            url(../img/cards/image-4.jpg);
+        }
+    }
+
+    &__picture--2::after {
+        content: 'Best price';
+        color: $color-secondary;
+        padding: 2px 2rem;
+        text-transform: uppercase;
+        background: #fcd34d;
+        display: block;
+        position: absolute;
+        top: 9%;
+        right: -8.5%;
+        transform: rotate(45deg);
+        font-size: 1.4rem;
+        letter-spacing: .5px;
+
+        @include respond(tab-port) {
+            right: -7%;
+        }
+    }
+
+    &__header {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__heading {
+        color: $color-primary;
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-size: 2.6rem;
+        position: absolute;
+        top: 33%;
+        right: 10%;
+    }
+
+    &__price {
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+
+        span {
+            font-size: 3rem;
+            font-weight: 100;
+        }
+        
+    }
+    &__text {
+        font-size: 2rem;
+    }
+
+
+}
+
+.list {
+    list-style: none;
+    padding: 2.5rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    font-size: 1.4rem;
+    margin: 0 auto;
+
+    @include respond(thousand) {
+        width: 90%;
+     }
+
+    &__item {
+        display: flex;
+        padding-bottom: 10px;
+        margin-bottom: 1.2rem;
+        gap: 1rem;
+        align-items: center;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(0,0,0, 0.1);
+
+        }
+
+        & > span::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    &__icon {
+        color: $color-primary;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,82 @@
+.cta {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba($color-primary-light, 1), rgba($color-primary-dark, 1));
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+    @include respond(eightHandred) {
+        grid-template-columns: 1fr;
+    }
+    
+
+    &__text-box {
+        padding:  9rem 8.6rem;
+
+        @include respond(tab-port) {
+            padding: 3.5rem 3rem;
+        }
+    }
+
+    &__heading {
+        color: #57534e;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    &__text {
+        margin-bottom: 5rem;
+        line-height: 1.5;
+        letter-spacing: .4px;
+
+        @include respond(tab-port) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__image-box {
+        background-image: linear-gradient(to right, rgba(235, 151, 78, 0.3), rgba(230, 125, 34, 0.3)),
+        url('../img/cta-image.webp');
+        background-size: cover;
+        background-position: center;    
+        @include respond(eightHandred) {
+            display: none;
+        }
+    }
+
+    &__form {
+        display: grid;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        grid-template-columns: 1fr 1fr;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 600;
+            font-size: 1.4rem;;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 1rem 1.6rem;
+            border-radius: 10px;
+            font-family: inherit;
+            outline: none;
+            border: none;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        select {
+            margin-right: 3rem;
+        }
+    }
+}

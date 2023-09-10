@@ -1,0 +1,73 @@
+.composition {
+    position: relative;
+
+    @include respond(tab-port) {
+        // position: relative;
+        display: flex;
+    }
+
+    &__photo {
+        position: absolute;
+        width: 60%;
+        height: 23rem; 
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 1.5rem 4rem rgba($color-secondary-dark, 0.2);
+        -webkit-aspect-ratio: 3 / 2;
+
+        @include respond(tab-land) {
+            // width: 50%;
+            // width: auto;
+            // height: rem;
+            // height: auto; 
+            object-fit: cover;
+        }
+
+        @include respond(tab-port) {
+            position: relative;
+        }
+
+
+
+
+        &--p1 {
+            top: 0%;
+            left: 0%;
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.1), rgba($color-primary-dark, 0.1)),
+            url('../img/about/img-1.webp');
+
+            @include respond(thousand) {
+                top: 5%;
+             }
+
+        }
+        &--p2 {
+            top: 18%;
+            left: 45%;
+            z-index: 1;
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.1), rgba($color-primary-dark, 0.1)),
+            url('../img/about/img-2.jpg');
+
+            @include respond(tab-port) {
+                top: 0;
+                left: 0;
+            }
+        }
+        &--p3 {
+            top: 40%;
+            left: 8%;
+            z-index: 2;
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.1), rgba($color-primary-dark, 0.1)),
+            url('../img/about/img-3.jpg');
+
+            @include respond(tab-port) {
+                top: 0;
+                left: 0;
+            }
+
+            @include respond(phone) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    background-color: $color-secondary;
+    border-bottom: 1px solid $color-primary-light;
+    max-height: 10vh;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 3.2rem; 
+}
+
+.section-hero {
+    height: 90vh;
+    padding: 6rem 7.6rem;
+    background-image: linear-gradient(to right, rgba($color-secondary-light, .53), rgba($color-secondary-dark, .53)), url(../img/hero-image-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @include respond(tab-land) {
+        height: 80vh;
+        // background-position: top;
+        // background-size:contain;
+    }
+
+    @include respond(thousand) {
+        height: 70vh;
+        background-size: cover;
+    }
+
+    @include respond(tab-port) {
+        height: 60vh;
+        background-size: cover;
+    }
+}
+
+.section-featured {
+    padding: 2rem;
+    background-color: $color-stone;
+
+}
+
+.section-about {
+    background-color: rgba($color-primary, 0.01);
+    padding: 6rem 12rem;
+
+    @include respond(small-laptop) {
+        padding: 5rem 3rem;
+     }
+
+
+}
+
+.section-price {
+    background-color: rgba($color-primary, 0.03);
+    padding: 6rem 12rem;
+
+    @include respond(small-laptop) {
+        padding: 5rem 3rem;
+    }
+}
+
+.section-testimonials {
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    gap: 6rem;
+    align-items: center;
+    background-color: rgba($color-primary, 0.01);
+    // padding: 6rem 12rem;
+    max-width: 120rem;
+    margin: 0 auto;
+
+    @include respond(small-laptop) {
+        padding: 5rem 5.2rem;
+        gap: 3rem;
+    }
+
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+        row-gap: 10rem;
+        align-items: start;
+    }
+
+    
+}
+
+.section-cta {
+    padding: 6rem 12rem;
+    padding-bottom: 12rem;
+    background-color: rgba($color-primary, 0.03);
+
+    @include respond(tab-land) {
+        padding: 5rem 3rem;
+    }
+    
+}

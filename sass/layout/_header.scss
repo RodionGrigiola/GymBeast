@@ -1,0 +1,62 @@
+.logo {
+    height: 3.5rem;
+    transform: scale(1.5);
+    margin-left: 3.5rem;
+ }
+
+ .hero {
+    color: $color-primary;
+    margin: 0 auto;
+    max-width: 130rem;
+    // padding: 9rem 0;
+    display: grid;
+    grid-template-columns: 1fr 60%;
+    grid-template-rows: 1fr;
+    justify-items: left;
+    text-align: center;
+
+    @include respond(small-laptop) {
+    //    padding: 9rem 3rem;
+       grid-template-columns: 1fr 1%;
+    //    max-width: 120rem;
+    }
+
+
+
+    @include respond(thousand) {
+    //   grid-template-columns: 1fr 40%;
+    }
+
+    
+
+
+    &__description {
+        font-size: 3.6rem;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        animation: moveInLeft 1s;
+        text-align: left;
+
+        @include respond(small-laptop) {
+                font-size: 3rem;
+        }
+
+    }
+
+    &__action-box {
+       display: flex;
+       justify-content: space-between;
+       animation: moveInButtom 2s ease-out 1s;
+       animation-fill-mode: backwards;
+       gap: 2rem;
+
+    //    @include respond(small-laptop) {
+    //     justify-content: space-around;
+    //    }
+
+    }
+    &::after {
+        content: '';
+        display: block;
+    }
+}

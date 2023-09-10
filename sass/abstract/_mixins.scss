@@ -1,0 +1,64 @@
+/// MEDIA QUERY MANAGER
+/*
+  0 - 600px: Phone
+  600 - 900px: Tablet portrait
+  900 - 1200px: Tablet landscape
+  [1200 - 1800]: Normal styles
+  1800+: Big Desktop
+
+$breakpoint argument choices:
+- phone 600px : max width asks if the width is less than 600px
+- tab-port
+- tap-land
+- big-desktop
+
+ORDER: 
+    Base + Typography
+    General Layout
+    Page layout
+    Components
+*/
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == small-phone {
+        @media (max-width: 31.25em) { @content }; // 500px
+    };
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; // 600px
+    };
+    @if $breakpoint == eightHandred {
+        @media (max-width: 50em) { @content }; // 800px
+    };
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; // 900px
+    };
+    @if $breakpoint == thousand {
+        @media (max-width: 62.5em) { @content }; // 1000px
+    };
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; // 1200px
+    };
+    @if $breakpoint == small-laptop {
+        @media (max-width: 85.4em) { @content }; // 1366
+    }   
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content }; // 1800px
+    }   
+} 
+
+
+
+/*<section class="section-featured">
+<div class="container">
+    <!-- <h2 class="heading-featured-in">As featured in</h2> 
+    <div class="logos">
+        <img class="logos__img" src="img/brands/optimum-nutrition.svg" alt="optimum nutrition logo">
+        <img class="logos__img" src="img/brands/myprotein.svg" alt="my protein logo">
+        <img class="logos__img" src="img/brands/adidas.svg" alt="thenx logo">
+        <img class="logos__img" src="img/brands/street-workout.svg" alt="street workout logo">
+        <img class="logos__img" src="img/brands/nike.svg" alt="barbell logo">
+    </div>
+    
+</div>
+</section> --> */

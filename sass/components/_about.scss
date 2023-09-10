@@ -1,0 +1,7 @@
+.heading-about-container {
+    text-align: center;
+
+    @include respond(small-phone) {
+        text-align: left;
+    }
+}

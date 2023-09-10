@@ -1,0 +1,25 @@
+.main-nav {
+
+    margin-right: 1.5rem;
+
+    &__list {
+     display: flex;
+     gap: 2rem;
+     list-style: none;
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: $color-primary;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all .2s ease-out;
+    }
+
+    &__link:hover,
+    &__link:active {
+        color: $color-primary-light;
+        border-bottom: 1px solid $color-primary-light;
+
+    }
+}
