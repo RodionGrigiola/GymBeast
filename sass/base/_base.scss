@@ -36,7 +36,7 @@ html {
     It needs to be done to hide the mobile nav when it is moved 
     to the right 100% and we can't scroll right and see it */
     overflow-x: hidden;
-        scroll-behavior: smooth;
+    scroll-behavior: smooth;
 
 
     @include respond(tab-land) {
