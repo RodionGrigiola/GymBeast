@@ -27,3 +27,22 @@ links.forEach((link) => {
     }
   });
 });
+
+// Sticky Nav
+
+const sectionHero = document.querySelector(".section-hero");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+    if (!ent.isIntersecting) document.body.classList.add("sticky");
+    if (ent.isIntersecting) document.body.classList.remove("sticky");
+  },
+  {
+    root: null, // means observe hero section inside the viewport
+    threshold: 0, // fire an event as soon as 0% of section-hero is in the viewport
+    rootMargin: "-80px", // the offset from hero end (the height of the stick nav)
+  }
+);
+
+observer.observe(sectionHero);

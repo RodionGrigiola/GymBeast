@@ -628,6 +628,33 @@ body {
 .grid-center-vertically {
   align-items: center; }
 
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: #1c1917;
+  border-bottom: 1px solid #fcd34d;
+  max-height: 8vh; }
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.sticky .section-hero {
+  margin-top: 6rem; }
+  @media (max-width: 85.4em) {
+    .sticky .section-hero {
+      margin-top: 5rem; } }
+
 .logo {
   height: 3.5rem;
   transform: scale(1.5);
@@ -778,16 +805,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem; }
-
-.header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 3rem;
-  background-color: #1c1917;
-  border-bottom: 1px solid #fcd34d;
-  max-height: 10vh; }
 
 .container {
   max-width: 120rem;
