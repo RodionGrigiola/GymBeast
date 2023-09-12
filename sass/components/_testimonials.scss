@@ -10,7 +10,6 @@
         grid-template-columns: 1fr 1fr;
         column-gap: 4rem;
         row-gap: 2rem;
-        // padding: 9.6rem;
 
         @include respond(tab-port) {
             
@@ -18,8 +17,6 @@
 
         & > figure {
             padding: 1rem;
-            // border: 1px solid transparent;
-            // box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 
             img {
                 border-radius: 50%;

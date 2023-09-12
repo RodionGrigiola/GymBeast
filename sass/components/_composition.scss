@@ -2,7 +2,6 @@
     position: relative;
 
     @include respond(tab-port) {
-        // position: relative;
         display: flex;
     }
 
@@ -16,19 +15,12 @@
         -webkit-aspect-ratio: 3 / 2;
 
         @include respond(tab-land) {
-            // width: 50%;
-            // width: auto;
-            // height: rem;
-            // height: auto; 
             object-fit: cover;
         }
 
         @include respond(tab-port) {
             position: relative;
         }
-
-
-
 
         &--p1 {
             top: 0%;
@@ -46,7 +38,7 @@
             left: 45%;
             z-index: 1;
             background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.1), rgba($color-primary-dark, 0.1)),
-            url('../img/about/img-2.jpg');
+            url('../img/about/img-2.webp');
 
             @include respond(tab-port) {
                 top: 0;
@@ -58,7 +50,7 @@
             left: 8%;
             z-index: 2;
             background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.1), rgba($color-primary-dark, 0.1)),
-            url('../img/about/img-3.jpg');
+            url('../img/about/img-3.webp');
 
             @include respond(tab-port) {
                 top: 0;

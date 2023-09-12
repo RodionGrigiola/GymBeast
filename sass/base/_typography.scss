@@ -13,10 +13,6 @@
    @include respond(tab-port) {
         font-size: 4.2rem;
      }
-
-
-
-
 }
 
 .heading-secondary {
@@ -27,6 +23,7 @@
     text-align: center;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     display: inline-block;
+    background-clip: text;
     -webkit-background-clip: text;
     color:transparent;
     border-bottom: 1px solid rgba($color-primary-light, 0.3);
@@ -35,7 +32,6 @@
      @include respond(tab-port) {
         margin-bottom: 3.5rem;
     }
-
 }
 
 .heading-tertiary {
@@ -43,8 +39,6 @@
     letter-spacing: .2px;
     text-transform: uppercase;
     margin-bottom: 1.4rem;
-
-   
 }
 
 .heading-featured-in {

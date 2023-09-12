@@ -1,8 +1,59 @@
 .hero {
+    color: $color-primary;
+    margin: 0 auto;
+    max-width: 130rem;
+    display: grid;
+    grid-template-columns: 1fr 60%;
+    grid-template-rows: 1fr;
+    justify-items: left;
+    text-align: center;
 
-
-    &__action-box {
-        
+    @include respond(small-laptop) {
+       grid-template-columns: 1fr 1%;
     }
 
+    &__description {
+        font-size: 3.6rem;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        animation: moveInLeft 1s;
+        text-align: left;
+
+        @include respond(small-laptop) {
+                font-size: 3rem;
+        }
+    }
+
+    &__action-box {
+       display: flex;
+       justify-content: space-between;
+       animation: moveInButtom 2s ease-out 1s;
+       animation-fill-mode: backwards;
+       gap: 2rem;
+
+       @include respond(small-phone) {
+        flex-direction: column;
+       }
+
+    }
+    &::after {
+        content: '';
+        display: block;
+    }
+}
+
+.sticky .section-hero {
+    margin-top: 6rem;
+
+    @include respond(small-laptop) {
+        margin-top: 5rem;
+     }
+}
+
+.heading-about-container {
+    text-align: center;
+
+    @include respond(small-phone) {
+        text-align: left;
+    }
 }

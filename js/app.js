@@ -7,7 +7,6 @@ document.querySelector(".btn-mobile-nav").addEventListener("click", () => {
 const links = document.querySelectorAll("a:link");
 links.forEach((link) => {
   link.addEventListener("click", (e) => {
-    e.preventDefault();
     const href = link.getAttribute("href");
 
     // Scroll back to top
@@ -29,7 +28,6 @@ links.forEach((link) => {
 });
 
 // Sticky Nav
-
 const sectionHero = document.querySelector(".section-hero");
 
 const observer = new IntersectionObserver(
@@ -46,3 +44,22 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(sectionHero);
+
+// Fixing flexbox gap property missing in some Safari versions
+function checkFlexGap() {
+  var flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
+
+  document.body.appendChild(flex);
+  var isSupported = flex.scrollHeight === 1;
+  flex.parentNode.removeChild(flex);
+  console.log(isSupported);
+
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
+}
+checkFlexGap();

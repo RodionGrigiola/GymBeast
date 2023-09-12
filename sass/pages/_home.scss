@@ -7,34 +7,31 @@
 .section-hero {
     height: 92vh;
     padding: 6rem 7.6rem;
-    background-image: linear-gradient(to right, rgba($color-secondary-light, .53), rgba($color-secondary-dark, .53)), url(../img/hero-image-2.jpg);
+    background-image: linear-gradient(to right, rgba($color-secondary-light, .53), rgba($color-secondary-dark, .53)), url(../img/hero-image.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-
-
 }
 
 .section-featured {
     padding: 2rem;
     background-color: $color-stone;
-
 }
 
 .section-about {
     background-color: rgba($color-primary, 0.01);
     padding: 6rem 12rem;
+    padding-top: 8rem;
 
     @include respond(small-laptop) {
         padding: 5rem 3rem;
      }
-
-
 }
 
 .section-price {
     background-color: rgba($color-primary, 0.03);
     padding: 6rem 12rem;
+    padding-top: 8rem;
 
     @include respond(small-laptop) {
         padding: 5rem 3rem;
@@ -47,9 +44,9 @@
     gap: 6rem;
     align-items: center;
     background-color: rgba($color-primary, 0.01);
-    // padding: 6rem 12rem;
     max-width: 120rem;
     margin: 0 auto;
+    padding-top: 3rem;
 
     @include respond(small-laptop) {
         padding: 5rem 5.2rem;
@@ -61,13 +58,10 @@
         row-gap: 10rem;
         align-items: start;
     }
-
-    
 }
 
 .section-cta {
-    padding: 6rem 12rem;
-    padding-bottom: 12rem;
+    padding: 12rem;
     background-color: rgba($color-primary, 0.03);
 
     @include respond(tab-land) {

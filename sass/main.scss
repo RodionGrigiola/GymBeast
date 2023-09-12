@@ -2,22 +2,26 @@
 @import './base/base';
 @import './base/typography';
 @import './base/animations';
+@import './base/util';
 
+@import './pages/home';
+
+
+@import './layout/header';
+@import './layout/navigation';
+@import './layout/footer';
+
+@import './components/hero';
 @import './components/button';
 @import './components/composition';
 @import './components/card';
 @import './components/testimonials';
 @import './components/gallery';
 @import './components/cta';
-@import './components/about';
 @import './components/mobile-nav';
 
 
-@import './base/util';
 
-@import './layout/header';
-@import './layout/navigation';
-@import './layout/footer';
 
-@import './pages/home';
+
 

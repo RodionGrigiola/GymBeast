@@ -26,35 +26,33 @@
 }
 
 .grid--2--cols {
-    grid-template-columns: repeat(2, 1fr);  /* 1fr 1fr*/
+    grid-template-columns: repeat(2, 1fr); 
     @include respond(tab-land) {
         gap: 3.5rem;
     }
     @include respond(tab-port) {
         align-items: start;
         grid-template-columns: 1fr; 
-        // grid-template-rows: 1fr 1fr;
     }
 
 }  
 .grid--3--cols {
-    grid-template-columns: repeat(3, 1fr);  /* 1fr 1fr*/
-    // grid-template-columns: repeat(2, 1fr);  /* 1fr 1fr*/
+    grid-template-columns: repeat(3, 1fr); 
     @include respond(tab-land) {
         grid-template-columns: 1fr; 
     }
 }  
 .grid--4--cols {
-    grid-template-columns: repeat(4, 1fr);  /* 1fr 1fr*/
-    // @include respond(tab-land) {
-    //     grid-template-columns: 1fr 1fr;
-    //     justify-items: center;
-    // }
+    grid-template-columns: repeat(4, 1fr); 
 }  
 .grid--5--cols {
-    grid-template-columns: repeat(5, 1fr);  /* 1fr 1fr*/
+    grid-template-columns: repeat(5, 1fr);  
 }  
 
 .grid-center-vertically {
     align-items: center;
+}
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 1.6rem;
 }

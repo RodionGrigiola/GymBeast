@@ -1,9 +1,7 @@
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
     color: $color-primary;
-    // justify-items: center;
-    // text-align: center;
 
     @include respond(tab-land) {
         column-gap: 2rem;
@@ -14,13 +12,6 @@
         grid-template-rows: repeat(2, 1fr);
         row-gap: 6rem;
     }
-
-    // @include respond(phone) {
-    //     grid-template-columns: 1fr 1fr 1fr;
-    //     row-gap: 3rem;
-    // }
-
-
 }
 
 .footer {
@@ -41,7 +32,6 @@
             grid-column: span 2;
          }
     }
-
   
     &__logo-col {
         @include respond(tab-land) {
@@ -59,28 +49,11 @@
          }
     }
 
-    // &__account {
-    //     @include respond(eightHandred) {
-    //         grid-column: 1 / 2;
-    //      }
-    // }
-
-    // &__company {
-    //     @include respond(eightHandred) {
-    //         grid-row: 4 / 5;
-    //         grid-column: 4 / 5;
-    //      }
-
-    // }
-
     &__resources {
         @include respond(eightHandred) {
             grid-column: 7 / 8;
          }
-
     }
-
-    
 
     &__logo {
         margin-bottom: 3rem;
@@ -105,6 +78,12 @@
         display: inline-block;
         text-decoration: none;
         font-weight: 100;
+        transition: all .3s;
+        border-bottom: .5px solid transparent;
+    }
+    
+    &__link:hover {
+        border-bottom: .5px solid $color-primary;
     }
 
     &__copyright {
@@ -123,6 +102,25 @@
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-
     }
+}
+
+.social-icon {
+   transition: all .2s;
+}
+
+.instagram:hover {
+   color: $color-instagram;
+}
+
+.facebook:hover {
+   color: $color-facebook;
+}
+
+.twitter:hover {
+   color: $color-twitter;
+}
+
+.youtube:hover {
+   color: $color-youtube;
 }
