@@ -40,9 +40,6 @@ ORDER:
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  /* Hide all the elements that are overflowing the body
-    It needs to be done to hide the mobile nav when it is moved 
-    to the right 100% and we can't scroll right and see it */
   overflow-x: hidden;
   scroll-behavior: smooth; }
   @media (max-width: 75em) {
@@ -62,7 +59,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
   overflow-x: hidden;
-  color: #292524; }
+  color: #292524;
+  scroll-behavior: smooth; }
 
 .heading-primary {
   font-size: 6.4rem;
@@ -662,6 +660,9 @@ body {
     animation: moveInButtom 2s ease-out 1s;
     animation-fill-mode: backwards;
     gap: 2rem; }
+    @media (max-width: 31.25em) {
+      .hero__action-box {
+        flex-direction: column; } }
   .hero::after {
     content: '';
     display: block; }
@@ -673,10 +674,11 @@ body {
       background-color: rgba(0, 0, 0, 0.9);
       position: absolute;
       top: 0;
-      left: 100%;
+      left: 0;
       width: 100%;
       height: 100vh;
       z-index: 1;
+      transform: translateX(100%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -706,19 +708,20 @@ body {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
-  left: 0; }
+  transform: translateX(0); }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
   color: #fbbf24; }
   @media (max-width: 75em) {
     .footer-grid {
       column-gap: 2rem; } }
-  @media (max-width: 37.5em) {
+  @media (max-width: 50em) {
     .footer-grid {
-      grid-template-columns: 1fr 1fr 1fr;
-      row-gap: 3rem; } }
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 6rem; } }
 
 .footer {
   background-color: #1c1917;
@@ -729,14 +732,23 @@ body {
   @media (max-width: 31.25em) {
     .footer {
       padding: 7rem 0; } }
+  @media (max-width: 50em) {
+    .footer .nav-col {
+      grid-row: 1;
+      grid-column: span 2; } }
   @media (max-width: 75em) {
     .footer__logo-col {
       margin-right: 1rem; } }
-  @media (max-width: 37.5em) {
+  @media (max-width: 50em) {
     .footer__logo-col {
-      grid-row: 1 / 3;
-      grid-column: 1 / 2;
-      margin: auto 0; } }
+      grid-column: span 3;
+      justify-self: center; } }
+  @media (max-width: 50em) {
+    .footer__address {
+      grid-column: span 3; } }
+  @media (max-width: 50em) {
+    .footer__resources {
+      grid-column: 7 / 8; } }
   .footer__logo {
     margin-bottom: 3rem;
     display: block; }
@@ -768,6 +780,7 @@ body {
     gap: 1.5rem; }
 
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -782,23 +795,12 @@ body {
   padding: 0 3.2rem; }
 
 .section-hero {
-  height: 90vh;
+  height: 92vh;
   padding: 6rem 7.6rem;
   background-image: linear-gradient(to right, rgba(41, 37, 36, 0.53), rgba(28, 25, 23, 0.53)), url(../img/hero-image-2.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed; }
-  @media (max-width: 75em) {
-    .section-hero {
-      height: 80vh; } }
-  @media (max-width: 62.5em) {
-    .section-hero {
-      height: 70vh;
-      background-size: cover; } }
-  @media (max-width: 56.25em) {
-    .section-hero {
-      height: 60vh;
-      background-size: cover; } }
 
 .section-featured {
   padding: 2rem;

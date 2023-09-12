@@ -32,12 +32,8 @@ $color-stone-dark: #d6d3d1;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-        /* Hide all the elements that are overflowing the body
-    It needs to be done to hide the mobile nav when it is moved 
-    to the right 100% and we can't scroll right and see it */
     overflow-x: hidden;
-    scroll-behavior: smooth;
-
+    scroll-behavior: smooth; // dont work with safari yet(iphone problem - js fix needed)
 
     @include respond(tab-land) {
         font-size: 56.25%;
@@ -58,6 +54,7 @@ body {
     font-size: 1.6rem;
     overflow-x: hidden;
     color: $color-secondary-light;
+    scroll-behavior: smooth;
 
 }
 

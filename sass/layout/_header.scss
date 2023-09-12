@@ -50,9 +50,9 @@
        animation-fill-mode: backwards;
        gap: 2rem;
 
-    //    @include respond(small-laptop) {
-    //     justify-content: space-around;
-    //    }
+       @include respond(small-phone) {
+        flex-direction: column;
+       }
 
     }
     &::after {
