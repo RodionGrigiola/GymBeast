@@ -6,13 +6,17 @@
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "compile:sass": "node-sass sass/main.scss css/style.css",
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "prod": "parcel ./index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.9.3",
+    "@parcel/transformer-webmanifest": "^2.9.3",
     "lite-server": "^2.6.1",
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "parcel": "^2.9.3"
   }
 }
